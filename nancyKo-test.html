@@ -34,6 +34,7 @@
       introduction.style.display = "none";
       theTest.style.display = "block";
     }
+
   </script>
   <title>Shapeways.com HTML Test</title>
 </head>
@@ -55,11 +56,15 @@
     </p>
   </div>
   <style type="text/css">
+    #theTest {
+      display: none;
+    }
     .invisibleQuestion
     {
       filter:alpha(opacity=40);
       -moz-opacity:0.4;
       opacity:0.4;
+      color: #FFFFFF;
     }
     #question3  {
       color: blue;
@@ -71,8 +76,17 @@
       margin-top: 15px;
       background-image: url("http://apod.nasa.gov/apod/image/1511/NGC1333_aae.jpg")
     }
+    #question7 {
+      font-weight: bold; 
+    }
+    .instructionContent {
+      color: #383838;
+    }
+    .segmentedQuestion {
+      display: inline;
+    }
   </style>
-  <div id="theTest" style="display:none;">
+  <div id="theTest">
     <h2>
     Questions
     </h2>
@@ -89,7 +103,7 @@
         Make this question blue using an external id selector.
         </li>
         <li id="question4"><strong>Q:</strong>
-        <h3 style="display:inline"> Feature Question </h3><br>
+        <h3 class="segmentedQuestion"> Feature Question </h3><br>
         Add a table inside this list item.<br>
         &mdash;
         Make 5 rows and 3 columns.<br>
@@ -142,7 +156,7 @@
         <a href="http://www.shapeways.com/jobs">Jobs @ Shapeways</a>
         </li>
         <li id="question6"><strong>Q:</strong>
-          <h3 style="display:inline"> Feature Question </h3><br>
+          <h3 class="segmentedQuestion"> Feature Question </h3><br>
           Create a button below this sentence.<br>
           <button type="button" id="question6-onclick" onclick="alertValue('I\'ve done it!')">Click Me</button>
           When the button is clicked, make an alert box appear that says &quot;I&#39;ve done it!&quot;<br>
@@ -162,6 +176,7 @@
         <span>
           Describe the differences between the IE6, IE7, and W3C box models.
         </span>
+        <p><strong>A: </strong>Box model is referring to dimensions of the element calculated by the Margin, border and padding. There are differences in how these dimensions are calculated and therefore pages are displayed differently in different browsers. Major differences between IE and W3C is how width is calculated. W3C calculates width by the amount of space the contents of the element takes up, whereas in IE the width is calculated by the amount of space the border around the contents occupy. There are several methods to address this. We could create separate stylesheets for each browser (which is not ideal). We can also work around this by using CSS 'border-box' sizing to resolve some cross-browser compatibilty, but that would not affect IE6. A better way to make the page consistent across browsers is using CSS filters that specify browsers and either show or hide certain properties and values based on the browsers support for W3C standards.</p>
         </li>
         <li id="question11"><strong>Q:</strong>
         <span>
@@ -169,7 +184,7 @@
         </span>
         </li>
         <li id="question12"><strong>Q:</strong>
-        <h3 style="display:inline"> Adventure Question </h3>
+        <h3 class="segmentedQuestion"> Adventure Question </h3>
         <ul>
           <li>
             Add a semi-transparent box which is centered on the screen.
@@ -193,7 +208,7 @@
           </ul>
         </li>
         <li id="question13"><strong>Q:</strong>
-        <h3 style="display:inline"> Adventure Question </h3><br>
+        <h3 class="segmentedQuestion"> Adventure Question </h3><br>
           Change the functionality of the &quot;begin the test&quot; link:
           <ul>
             <li>
@@ -205,7 +220,7 @@
           </ul>
         </li>
         <li id="question14"><strong>Q:</strong>
-        <h3 style="display:inline"> Feature Question </h3><br>
+        <h3 class="segmentedQuestion"> Feature Question </h3><br>
         <ol>
         <li> Show how to include a variable in a page using PHP</li>
         <li> Show how to loop over a collection of elements in PHP</li>
@@ -214,21 +229,15 @@
         </ol>
         </li>
         <li id="question15"><strong>Q:</strong>
-        <h3 style="display:inline"> Adventure Question </h3><br>
+        <h3 class="segmentedQuestion"> Adventure Question </h3><br>
           Describe the MVC design pattern as it applies to web servers - start from initial HTTP request and end with writing the response.
         </li>
         <li id="question16"><strong>Q:</strong>
-        <h3 style="display:inline"> Feature Question </h3><br>
+        <h3 class="segmentedQuestion"> Feature Question </h3><br>
           Describe the pros and cons of version control.
         </li>
       </ul>
       </div>
   </div>
-  <style type="text/css">
-    .invisibleQuestion
-    {
-      color: #FFFFFF;
-    }
-  </style>
 </body>
 </html>
