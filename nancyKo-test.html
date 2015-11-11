@@ -64,6 +64,13 @@
     #question3  {
       color: blue;
     }
+    tbody tr:nth-child(3) td:nth-child(2) {
+      background-color: red;
+    }
+    #question5 {
+      margin-top: 15px;
+      background-image: url("http://apod.nasa.gov/apod/image/1511/NGC1333_aae.jpg")
+    }
   </style>
   <div id="theTest" style="display:none;">
     <h2>
@@ -132,10 +139,12 @@
         <li id="question5"><strong>Q:</strong>
         Create a link to the URL http://www.shapeways.com/jobs and make the link text &quot;Jobs @ Shapeways&quot;.
         Give this question a top margin of 15px, and a background image from the internet.
+        <a href="http://www.shapeways.com/jobs">Jobs @ Shapeways</a>
         </li>
         <li id="question6"><strong>Q:</strong>
           <h3 style="display:inline"> Feature Question </h3><br>
           Create a button below this sentence.<br>
+          <button type="button" id="question6-onclick" onclick="alertValue('I\'ve done it!')">Click Me</button>
           When the button is clicked, make an alert box appear that says &quot;I&#39;ve done it!&quot;<br>
         </li>
         <li id="question7"><strong>Q:</strong>
